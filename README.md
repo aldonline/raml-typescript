@@ -30,5 +30,22 @@ Challenges
 * RAML is complex enough to require some advanced Typescript concepts that didn't make it to 1.3 ( Type Aliases and Union Types )
  * If you are in a hurry, check out the pre-release of the [CATS IDE](https://github.com/jbaron/cats)
  
+## Features
+
+### Documentation references the official Spec
+
 <img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/b.png" width="800"/>
+
+### Everything is typed - autocomplete FTW!
+
 <img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/c.png" width="800"/>
+
+### Takes advantage of advanced Typescript features
+
+### Union Types
+
+<img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/d.png" width="800"/>
+
+### And more!
+
+<img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/e.png" width="800"/>
