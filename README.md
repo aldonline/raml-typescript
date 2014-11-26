@@ -36,7 +36,7 @@ Challenges
 
 <img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/b.png" width="800"/>
 
-### Everything is typed - autocomplete FTW!
+### Everything is typed - autocomplete to the rescue ;)
 
 <img src="https://raw.githubusercontent.com/aldonline/raml-typescript/master/images/c.png" width="800"/>
 
