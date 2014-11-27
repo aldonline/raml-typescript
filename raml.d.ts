@@ -1,8 +1,8 @@
-// TODO: https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#named-parameters-with-multiple-types
+// TODO: http://raml.org/spec.html#named-parameters-with-multiple-types
 //       how is this surface on the parser?
 
 // TODO: this is where we left off in the spec doc:
-//       https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#resource-types-and-traits
+//       http://raml.org/spec.html#resource-types-and-traits
 
 
 /**
@@ -53,7 +53,7 @@ declare type HTTPMethodName = string
  * - Digest Authentication
  * - x-{other}
  * 
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#type-1
+ * @see http://raml.org/spec.html#type-1
  */
 declare type SecuritySchemeType = string
 
@@ -68,7 +68,7 @@ interface Api {
      * (Required) The title property is a short plain text description of the RESTful API.
      * The title property's value SHOULD be suitable for use as a title for the contained user documentation.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#api-title
+     * @see http://raml.org/spec.html#api-title
      */
     title:                   string
 
@@ -83,12 +83,12 @@ interface Api {
 
     /**
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#base-uri-and-baseuriparameters
+     * @see http://raml.org/spec.html#base-uri-and-baseuriparameters
      */
     baseUri?:                string
 
     /**
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#base-uri-and-baseuriparameters
+     * @see http://raml.org/spec.html#base-uri-and-baseuriparameters
      */
     baseUriParameters?:      NamedParameterMap
 
@@ -98,7 +98,7 @@ interface Api {
      * If the protocols property is not specified, the protocol specified at the baseUri property is used.
      * The protocols property MUST be an array of strings, of values "HTTP" and/or "HTTPS".
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#protocols
+     * @see http://raml.org/spec.html#protocols
      */
     protocols?:              Protocol[]
 
@@ -108,7 +108,7 @@ interface Api {
      * This property is specified at the root level of the API definition.
      * The property's value MAY be a single string with a valid media type
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#default-media-type
+     * @see http://raml.org/spec.html#default-media-type
      */
     mediaType?:              MediaType
 
@@ -119,7 +119,7 @@ interface Api {
      * The value of the schemas property is an array of maps; in each map, the keys are the schema name,
      * and the values are schema definitions.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#schemas
+     * @see http://raml.org/spec.html#schemas
      */
     schemas?:                {[ schemaName: string ]: SchemaDefinition }[]
 
@@ -131,7 +131,7 @@ interface Api {
      * For example, let's look at the following API provider that parameterizes the base URI with customer
      * information such as the company name.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#uri-parameters
+     * @see http://raml.org/spec.html#uri-parameters
      */
     uriParameters?:          NamedParameterMap
 
@@ -140,18 +140,18 @@ interface Api {
      * and reference documentation for the API. Such documents can clarify how the API works
      * or provide business context.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#user-documentation
+     * @see http://raml.org/spec.html#user-documentation
      */
     documentation?:          DocumentationItem[]
 
     /**
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#resources-and-nested-resources
+     * @see http://raml.org/spec.html#resources-and-nested-resources
      */
     resources?:              Resource[]
 
     /**
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#resource-types-and-traits
+     * @see http://raml.org/spec.html#resource-types-and-traits
      */
     resourceTypes?:          {[ resourceTypeName: string ]: ResourceType }[]
 
@@ -176,7 +176,7 @@ interface Resource {
      * documentation tools SHOULD refer to the resource by its property key (i.e. its relative URI, e.g., "/jobs"),
      * which acts as the resource's name.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#display-name
+     * @see http://raml.org/spec.html#display-name
      */
     displayName?:            string
 
@@ -184,7 +184,7 @@ interface Resource {
      * Each resource, whether top-level or nested, MAY contain a description property that briefly describes the resource.
      * It is RECOMMENDED that all the API definition's resources includes the description property.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#description-1
+     * @see http://raml.org/spec.html#description-1
      */
     description?:            MarkdownString
     
@@ -196,14 +196,14 @@ interface Resource {
      * A method MUST be one of the HTTP methods defined
      * in the HTTP version 1.1 specification [RFC2616] and its extension, RFC5789 [RFC5789].
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#methods
+     * @see http://raml.org/spec.html#methods
      */
     methods?:                Method[]
     
     type?:                   string | ResourceType
 
     /**
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#template-uris-and-uri-parameters
+     * @see http://raml.org/spec.html#template-uris-and-uri-parameters
      */
     uriParameters?:          NamedParameterMap
 
@@ -215,7 +215,7 @@ interface Resource {
      * defined at the root level baseUriParameters property,
      * as well as base URI parameters not specified at the root level.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#base-uri-parameters
+     * @see http://raml.org/spec.html#base-uri-parameters
      */
     baseUriParameters?:      NamedParameterMap
     
@@ -230,7 +230,7 @@ interface Resource {
  * A method MUST be one of the HTTP methods defined in the HTTP version 1.1 specification [RFC2616]
  * and its extension, RFC5789 [RFC5789].
  *
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#methods
+ * @see http://raml.org/spec.html#methods
  */
 interface Method {
     /**
@@ -246,14 +246,14 @@ interface Method {
      *
      * The value of the description property MAY be formatted using Markdown [MARKDOWN].
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#description-2
+     * @see http://raml.org/spec.html#description-2
      */
     description?:           MarkdownString
 
     /**
      * A method can override an API's protocols value for that single method by setting a different value for the fields.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#protocols-1
+     * @see http://raml.org/spec.html#protocols-1
      */
     protocols?:             Protocol[]
 
@@ -266,7 +266,7 @@ interface Method {
      * If the resource or its method supports a query string, the query string
      * MUST be defined by the queryParameters property.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#query-strings
+     * @see http://raml.org/spec.html#query-strings
      */
     queryParameters?:       NamedParameterMap
 
@@ -275,7 +275,7 @@ interface Method {
      * Resource methods MAY have one or more responses.
      * Responses MAY be described using the description property, and MAY include example attributes or schema properties.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#responses
+     * @see http://raml.org/spec.html#responses
      */
     responses?:             Responses
     securedBy?:             string
@@ -291,7 +291,7 @@ interface Method {
      * If the API's media type is either application/x-www-form-urlencoded or multipart/form-data,
      * the formParameters property MUST specify the name-value pairs that the API is expecting.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#body
+     * @see http://raml.org/spec.html#body
      */
     body?:                   Bodies
 
@@ -300,7 +300,7 @@ interface Method {
      * An API's methods MAY support or require non-standard HTTP headers.
      * In the API definition, specify the non-standard HTTP headers by using the headers property.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#headers
+     * @see http://raml.org/spec.html#headers
      */
     headers?:                NamedParameterMap
 }
@@ -322,7 +322,7 @@ interface ResourceType {
  * both of which are REQUIRED.
  * Documentation-generators MUST process the content field as if it was defined using Markdown [MARKDOWN].
  *
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#user-documentation
+ * @see http://raml.org/spec.html#user-documentation
  */
 interface DocumentationItem {
     title:                   string
@@ -333,7 +333,7 @@ interface DocumentationItem {
  *
  * Resource methods MAY have one or more responses.
  *
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#responses
+ * @see http://raml.org/spec.html#responses
  */
 interface Response {
     /**
@@ -346,14 +346,14 @@ interface Response {
      * An API's methods may support custom header values in responses.
      * The custom, non-standard HTTP headers MUST be specified by the headers property.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#headers-1
+     * @see http://raml.org/spec.html#headers-1
      */
     headers?:                NamedParameterMap
     body?:                   Bodies
 }
 
 /**
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#security
+ * @see http://raml.org/spec.html#security
  */
 interface SecurityScheme {
     type?:            SecuritySchemeType
@@ -388,24 +388,24 @@ interface BodyPayload {
      * Alternatively, the value of the schema field MAY be the name of a schema specified in the
      * root-level schemas property
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#schema
+     * @see http://raml.org/spec.html#schema
      */
     schema?:          string | SchemaDefinition
 
     /**
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#example-4
+     * @see http://raml.org/spec.html#example-4
      */
     example?:         string
 }
 /**
- * @see: https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#web-forms
+ * @see: http://raml.org/spec.html#web-forms
  */
 interface WebFormBodyPayload {
 
     formParameters:  NamedParameterMap
 
     /**
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#example-4
+     * @see http://raml.org/spec.html#example-4
      */
     example?:        string
 }
@@ -417,7 +417,7 @@ interface Responses { [ statusCode: string ]: Response } // [statusCode:string]:
 interface NamedParameterMap { [ parameterName: string ]: NamedParameter }
 
 /**
- * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#named-parameters
+ * @see http://raml.org/spec.html#named-parameters
  */
 interface BasicNamedParameter {
 
@@ -425,7 +425,7 @@ interface BasicNamedParameter {
      * (Optional) The description attribute describes the intended use or meaning of the parameter.
      * This value MAY be formatted using Markdown [MARKDOWN].
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#description
+     * @see http://raml.org/spec.html#description
      */
     description?:     MarkdownString
 
@@ -434,7 +434,7 @@ interface BasicNamedParameter {
      * It is a friendly name used only for display or documentation purposes.
      * If displayName is not specified, it defaults to the property's key (the name of the property itself).
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#displayname
+     * @see http://raml.org/spec.html#displayname
      */
     displayName?:     string
 
@@ -448,7 +448,7 @@ interface BasicNamedParameter {
      *
      * If there is no matching value, the clients and servers MUST treat this as an error.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#enum
+     * @see http://raml.org/spec.html#enum
      */
     'enum'?:          any[]
 
@@ -458,7 +458,7 @@ interface BasicNamedParameter {
      * API clients MUST return/throw an error if the parameter's resolved value does not match the specified type.
      * If type is not specified, it defaults to string.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#type
+     * @see http://raml.org/spec.html#type
      */
     type?:            string
 
@@ -467,7 +467,7 @@ interface BasicNamedParameter {
      * (Optional) The example attribute shows an example value for the property.
      * This can be used, e.g., by documentation generators to generate sample values for the property.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#example
+     * @see http://raml.org/spec.html#example
      */
     example?:         any // or string?
 
@@ -477,7 +477,7 @@ interface BasicNamedParameter {
      * If the parameter can be used multiple times, the repeat parameter value MUST be set to 'true'.
      * Otherwise, the default value is 'false' and the parameter may not be repeated.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#repeat
+     * @see http://raml.org/spec.html#repeat
      */
     repeat?:          boolean
 
@@ -489,7 +489,7 @@ interface BasicNamedParameter {
      * In general, parameters are optional unless the required attribute is included and its value set to 'true'.
      * For a URI parameter, the required attribute MAY be omitted, but its default value is 'true'.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#required
+     * @see http://raml.org/spec.html#required
      */
     required?:        boolean
 
@@ -513,7 +513,7 @@ interface NumericNamedParameter extends BasicNamedParameter {
      * (Optional, applicable only for parameters of type number or integer)
      * The minimum attribute specifies the parameter's minimum value.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#minimum
+     * @see http://raml.org/spec.html#minimum
      */
     minimum?:         number
 
@@ -522,7 +522,7 @@ interface NumericNamedParameter extends BasicNamedParameter {
      * (Optional, applicable only for parameters of type number or integer)
      * The maximum attribute specifies the parameter's maximum value.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#maximum
+     * @see http://raml.org/spec.html#maximum
      */
     maximum?:         number
 }
@@ -537,7 +537,7 @@ interface StringNamedParameter extends BasicNamedParameter {
      * The pattern MAY be enclosed in double quotes for readability and clarity.
      * ( in the JS parser. are the quotes preserved? )
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#pattern
+     * @see http://raml.org/spec.html#pattern
      */
     pattern?:         RegexPattern
 
@@ -547,7 +547,7 @@ interface StringNamedParameter extends BasicNamedParameter {
      * (Optional, applicable only for parameters of type string)
      * The minLength attribute specifies the parameter value's minimum number of characters.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#minlength
+     * @see http://raml.org/spec.html#minlength
      */
     minLength?:       number
 
@@ -556,7 +556,7 @@ interface StringNamedParameter extends BasicNamedParameter {
      * (Optional, applicable only for parameters of type string)
      * The maxLength attribute specifies the parameter value's maximum number of characters.
      *
-     * @see https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md#maxlength
+     * @see http://raml.org/spec.html#maxlength
      */
     maxLength?:       number
 
