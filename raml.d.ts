@@ -414,7 +414,7 @@ interface WebFormBodyPayload {
 interface Responses { [ statusCode: string ]: Response } // [statusCode:string]:  Response | Null
 
 
-interface NamedParameterMap { [ parameterName: string ]: NamedParameter }
+interface NamedParameterMap { [ parameterName: string ]: NamedParameter | NamedParameter[] }
 
 /**
  * @see http://raml.org/spec.html#named-parameters
